@@ -1,0 +1,34 @@
+- [x] k3s
+
+- [ ] alertmanager
+- [ ] cert-manager
+- [ ] Cluster API
+- [ ] CoreDNS
+- [ ] Crossplane + provider-helm
+- [ ] ExternalDNS
+- [ ] GitLab CE, or:
+    - [ ] Argo Events and Argo Workflows
+    - [ ] code-server
+    - [ ] Docker Registry
+    - [ ] Gitea
+    - [ ] Kaniko
+    - [ ] Wekan
+- [ ] Grafana
+- [ ] HashiCorp Vault
+- [ ] HedgeDoc
+- [ ] Istio
+- [ ] Jaeger and/or OpenTracing
+- [ ] KubeDB
+- [ ] KubeMQ or CloudEvents, with Kafka Bindings
+- [ ] Kubernetes Dashboard
+- [ ] KubeVirt
+- [ ] Litmus
+- [ ] Loki
+- [ ] Mattermost
+- [ ] ORY Hydra
+- [ ] Prometheus or cortex or Thanos
+- [ ] Rook
+- [ ] SchemaHero
+- [ ] Squid
+- [ ] Tinkerbell
+- [ ] Velero

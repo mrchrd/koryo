@@ -64,8 +64,20 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
+    #
+    # Install k3s
+    #
     curl -fsSL "https://get.k3s.io" |
       INSTALL_K3S_EXEC="--disable traefik --kube-apiserver-arg service-node-port-range=0-65535 --write-kubeconfig-mode=644" \
       sh -s -
+    kubectl completion bash > /etc/bash_completion.d/kubectl
+
+    #
+    # Install Helm
+    #
+    snap install helm --classic
+    for u in root vagrant; do
+      sudo -u $u sh -c "mkdir -p ~/.kube && kubectl config view --raw > ~/.kube/config && chmod -R g-rwx,o-rwx ~/.kube"
+    done
   SHELL
 end
